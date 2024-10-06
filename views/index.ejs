@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1>Welcome to the User Dashboard</h1>
+    <% if(usernames){%> <% usernames.forEach(name=>{ %>
+    <h3>ID: <%= name.id %>, Name: <%= name.username %></h3>
+    <% }) %> <%} %>
+    <a href="/new">Create new User.</a>
+    <form action="/delete" method="POST">
+      <button type="submit">DELETE all the users from db</button>
+    </form>
+    <script>
+      console.log("usernames will be logged here - wip");
+    </script>
+  </body>
+</html>
